@@ -1,11 +1,68 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/search_style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+  <script type="text/javascript"
+    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f2c751d94490f2b527082f7358e0b347&libraries=services"></script>
   <title>Document</title>
+
 </head>
+
 <body>
-  
+  <header>
+    <div class="container">
+      <a href="index.html" class="head-a"><img src="src/img/icon_eggplant.png" width="32px">가지탈출</a>
+    </div>
+    <nav>
+      <ul class="head-ul">
+        <li class="head-li"><a href="index.html">메인화면으로 이동</a></li>
+        <li class="head-li"><a href="impromptu.html">방탈출 번개 모임</a></li>
+        <li class="head-li"><a href="review.html">방탈출 후기 모음</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="map_wrap">
+    <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+
+    <div id="menu_wrap" class="bg_white">
+      <div class="option">
+        <div>
+          <form onsubmit="searchPlaces(); return false;">
+            <label>지역</label>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" value="서울" id="keyword" size="15">
+            <button type="submit">검색하기</button>
+          </form>
+        </div>
+      </div>
+      <hr>
+      <ul id="placesList"></ul>
+      <div id="pagination"></div>
+    </div>
+  </div>
+
+  <script>
+    var markers = []; // 마커
+
+    var mapContainer = document.getElementById('map'),
+      mapOption = {
+        center: new kakao.maps.LatLng(37.566826, 126.9786567), // 지도 중심좌표
+        level: 4 // 지도 확대 레벨
+      };
+    var map = new kakao.maps.Map(mapContainer, mapOption); // 지도 생성
+    var ps = new kakao.maps.services.Places(); // 장소 검색 객체 생성
+
+    // 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
+    var infowindow = new kakao.maps.InfoWindow({
+      zIndex: 1
+    });
+    searchPlaces(); // 키워드로 장소 검색
+  </script>
 </body>
+
 </html>
