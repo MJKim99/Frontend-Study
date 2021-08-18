@@ -1,0 +1,75 @@
+@font-face {
+  font-family: BMJUA;
+  src: url('../fonts/BMJUA_otf.otf');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: BMJUA;
+  color: #58595B;
+}
+
+body {
+  background-color: #F0E8D9;
+}
+
+p {
+  margin: 0;  
+}
+
+.title {
+  text-align: center;
+  font-size: 64px;
+  margin-top: 75px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 30px;
+  margin-bottom: 75px;
+}
+
+.divs-food {
+  margin-right: auto;
+  margin-left: auto;
+  
+  width: 660px;
+}
+
+.div-food {
+  width: 300px;
+  border-radius: 10px;
+  
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 50px;
+  
+  background-color: white;
+  text-align: center;
+  
+  float: left;
+}
+
+img {
+  border-radius: 10px 10px 0px 0px;
+}
+
+.div-food-ex {
+  padding: 20px;
+}
+
+.p-food-title {
+  font-size: 32px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.p-food-ex {
+  margin-bottom: 16px;
+}
+
+a  {
+  text-decoration: none;
+  color: #0000EE;
+}

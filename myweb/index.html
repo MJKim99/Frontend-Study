@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/scripts.js" type="text/javascript"></script>
+  <script src="https://use.fontawesome.com/926fe18a63.js"></script>
   <title>가지탈출</title>
 </head>
 
@@ -14,48 +15,52 @@
   <!-- 헤더 -->
   <header>
     <div class="container">
-      <a href="index.html" class="head-a"><img src="src/img/icon_eggplant.png" width="32px">가지탈출</a>
+      <div class="container-small">
+        <a href="index.html" class="head-a"><img src="src/img/icon_eggplant.png" width="32px">가지탈출</a>
+        <button type="button" class="head-btn">
+          <span class="fa fa-bars" title="MENU"></span>
+        </button>
+      </div>
+      <nav>
+        <ul class="head-ul">
+          <li class="head-li"><a href="search.html">주변 방탈출 검색</a></li>
+          <li class="head-li"><a href="impromptu.html">방탈출 번개 모임</a></li>
+          <li class="head-li"><a href="review.html">방탈출 후기 모음</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul class="head-ul">
-        <li class="head-li"><a href="search.html">주변 방탈출 검색</a></li>
-        <li class="head-li"><a href="impromptu.html">방탈출 번개 모임</a></li>
-        <li class="head-li"><a href="review.html">방탈출 후기 모음</a></li>
-      </ul>
-
-    </nav>
   </header>
 
   <!-- 컨텐츠 A -->
   <section class="section-A">
-    <div class="wrap-1">
+    <div class="wrap-1-content">
       <h1>당신 근처의<br>탈출시설</h1>
-      <p>주변 방탈출 시설부터 평점까지, 가지탈출과 함께해 가깝고 따뜻한 당신의 탈출기를 남겨요.</p>
+      <p>주변 방탈출 시설부터 평점까지, 가지탈출과<br>함께해 가깝고 따뜻한 당신의 탈출기를 남겨요.</p>
     </div>
     <div class="wrap-1-img">
-
+      <img src="src/img/escape02.jpeg" width="500px" height="500px" />
     </div>
   </section>
 
-  <!-- 컨텐츠 A -->
+  <!-- 컨텐츠 B -->
   <section class="section-B">
-    <div class="wrap-2">
+    <div class="wrap-2-content">
       <h1>우리 동네<br>탈출시설</h1>
       <p>탈출러들과 가깝고 따뜻한 탈출을 지금 경험해보세요.</p>
     </div>
     <div class="wrap-2-img">
-      
+      <img src="src/img/escape03.jpeg" />
     </div>
   </section>
 
-  <!-- 컨텐츠 A -->
+  <!-- 컨텐츠 C -->
   <section class="section-C">
-    <div class="wrap-3">
+    <div class="wrap-3-content">
       <h1>탈출러와 함께 하는<br>탈출기</h1>
       <p>우리 동네의 다양한 탈출기를 탈출러와 함께 나누어요.</p>
     </div>
     <div class="wrap-3-img">
-      
+      <img src="src/img/escape04.jpeg" />
     </div>
   </section>
 
@@ -65,16 +70,45 @@
       <li>고객문의 &nbsp;&nbsp;&nbsp;<a href="mailto:9mjkim@gmail.com">9mjkim@gmail.com</a></li>
       <li>제휴문의 &nbsp;&nbsp;&nbsp;<a href="mailto:9mjkim@gmail.com">9mjkim@gmail.com</a></li>
     </ul>
-    <p class="footer-address">서울특별시 관악구 (우리집)</p>
     <ul class="footer-sns-icon">
-      <li></li>
-      <li></li>
-      <li></li>
+      <li><a href="https://www.facebook.com"><img src="src/img/facebook.png" width="28px" height="28px" /></a>
+      </li>
+      <li><a href="https://www.instagram.com"><img src="src/img/instagram.png" width="28px" height="28px" /></a>
+      </li>
+      <li><a href="https://www.twitter.com"><img src="src/img/twitter.png" width="28px" height="28px" /></a></li>
     </ul>
     <p class="footer-github"><a href="https://github.com/MJKim99">© MJKim99</a></p>
-    <div class="footer-eggplant-icon">가지 아이콘 제작자 <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
-        href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
+    <div class="footer-eggplant-icon">가지 아이콘 제작자 <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+      <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a></div>
   </footer>
+
+  <script>
+    $(document).ready(function () {
+      var chk = true;
+      $('.head-btn').click(function () {
+        if (chk) {
+          $('.head-ul').slideToggle();
+          $('.head-ul').css({
+            'display': 'flex'
+          });
+          $('section').css({
+            'top': '130px'
+          });
+          chk = !chk;
+
+        } else {
+          $('.head-ul').slideToggle();
+          setTimeout(function () {
+            $('section').css({
+              'top': '50px'
+            });
+          }, 150)
+
+          chk = !chk;
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

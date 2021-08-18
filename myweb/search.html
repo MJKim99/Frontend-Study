@@ -17,15 +17,20 @@
 <body>
   <header>
     <div class="container">
-      <a href="index.html" class="head-a"><img src="src/img/icon_eggplant.png" width="32px">가지탈출</a>
+      <div class="container-small">
+        <a href="index.html" class="head-a"><img src="src/img/icon_eggplant.png" width="32px">가지탈출</a>
+        <button type="button" class="head-btn">
+          <span class="fa fa-bars" title="MENU"></span>
+        </button>
+      </div>
+        <nav>
+          <ul class="head-ul">
+            <li class="head-li"><a href="index.html">메인화면으로 이동</a></li>
+            <li class="head-li"><a href="impromptu.html">방탈출 번개 모임</a></li>
+            <li class="head-li"><a href="review.html">방탈출 후기 모음</a></li>
+          </ul>
+        </nav>
     </div>
-    <nav>
-      <ul class="head-ul">
-        <li class="head-li"><a href="index.html">메인화면으로 이동</a></li>
-        <li class="head-li"><a href="impromptu.html">방탈출 번개 모임</a></li>
-        <li class="head-li"><a href="review.html">방탈출 후기 모음</a></li>
-      </ul>
-    </nav>
   </header>
 
   <div class="map_wrap">
@@ -45,7 +50,6 @@
       <div id="pagination"></div>
     </div>
   </div>
-
   <script>
     var markers = []; // 마커
 
