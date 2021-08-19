@@ -9,9 +9,6 @@ img {
 
 section {
   height: 780px;
-
-  position: relative;
-  top: 300px;
 }
 
 section div {
@@ -20,10 +17,6 @@ section div {
 
 [class*="wrap-"] {
   width: 450px;
-}
-
-[class*="-img"] {
-  padding-left: 30px;
 }
 
 section>div>h1 {
@@ -47,10 +40,11 @@ section img {
 
   section {
     height: 650px;
+    margin-left: 0 !important;
   }
 
   .section-C {
-    margin-bottom: 300px;
+    margin-bottom: 350px;
   }
 
   section>div {
@@ -62,23 +56,20 @@ section img {
     width: 350px;
     height: 350px;
   }
-
-  [class*="-img"] {
-    margin-left: 50px;
-  }
 }
 
 @media (min-width: 768px) {
-  section {
-    top: 100px;
-  }
-
   section div {
     float: left;
+    margin-left: 30px;
   }
 }
 
 @media (max-width: 1023px) {
+  section {
+    margin-left: 50px;
+  }
+
   section img {
     width: 350px;
     height: 350px;

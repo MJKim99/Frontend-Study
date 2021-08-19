@@ -11,7 +11,7 @@
   <script src="https://use.fontawesome.com/926fe18a63.js"></script>
   <script type="text/javascript"
     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f2c751d94490f2b527082f7358e0b347&libraries=services"></script>
-  <title>가지탈출</title>
+  <title>가지탈출 :: 방탈출 검색</title>
 
 </head>
 
@@ -60,10 +60,10 @@
         if (chk) {
           $('.head-ul').slideToggle();
           $('.head-ul').css({
-            'display': 'flex'
+            'display': 'block'
           });
           $('.map_wrap').css({
-            'top': '150px'
+            'top': '146px'
           });
           chk = !chk;
 
@@ -71,13 +71,13 @@
           $('.head-ul').slideToggle();
           setTimeout(function () {
             $('.map_wrap').css({
-              'top': '70px'
+              'top': '330px'
             });
           }, 150)
 
           chk = !chk;
         }
-      });
+      }); // MENU click
     });
   </script>
 

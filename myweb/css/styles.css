@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'deardefault';
-  src: url('src/fonts/DearDefault.ttf') format('truetype');
+  src: url('../src/fonts/DearDefault.ttf') format('truetype');
 }
 
 body {
@@ -77,28 +77,8 @@ header .head-li a:hover {
 }
 
 @media (max-width: 767px) {
-  header .head-btn {
-    display: none;
-  }
-
-  header .head-ul {
-    display: block !important;
-  }
-}
-
-@media (min-width: 768px) {
-  header nav .head-ul {
-    display: none;
-  }
-
-  header nav .head-ul li {
-    width: 33.34%;
-  }
-
   header .container-small {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   header .head-btn {
@@ -112,8 +92,40 @@ header .head-li a:hover {
     cursor: pointer;
   }
 
+  header nav .head-ul {
+    display: block;
+  }
+
   header .head-btn:hover {
-    opacity: 0.3;
+    opacity: 0.5;
+  }  
+}
+
+@media (min-width: 768px) {
+  header nav .head-ul {
+    display: flex !important;
+  }
+
+  header nav .head-ul li {
+    width: 33.4%;
+    display: inline-block;
+  }
+
+  header .head-btn {
+    display: none;
+  }
+}
+
+/****************/
+/* section */
+section {
+  position: relative;
+  top: 350px;
+}
+
+@media (min-width: 768px) {
+  section {
+    top: 165px;
   }
 }
 
@@ -121,7 +133,6 @@ header .head-li a:hover {
 /* footer */
 footer {
   background-color: white;
-  /* position: relative; */
   height: 200px;
   padding: 0 50px;
 }

@@ -3,22 +3,11 @@
   color: #58595B;
 }
 
-p {
-  margin: 0;  
-}
-
 section {
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   
-  width: 700px;
-}
-
-.sec-div {
-  margin-right: auto;
-  margin-left: auto;
-  
-  width: 660px;
+  width: 1000px;
+  height: 800px;
 }
 
 .sec-div-content {
@@ -35,27 +24,94 @@ section {
   float: left;
 }
 
-img {
-  border-radius: 10px 10px 0px 0px;
-}
-
-.div-food-ex {
-  padding: 20px;
+[class*='sec-div-'] {
+  height: 330px;
+  display: inline-block;
+  margin-bottom: 50px;
 }
 
 .sec-p-title {
-  font-size: 32px;
-  margin-top: 0px;
-  margin-bottom: 20px;
+  margin: 20px 0 30px 0;
+
+  color: black;
+  font-size: 36px;
 }
 
 .sec-p-content {
-  margin-bottom: 16px;
+  margin: 0 25px 20px 25px;
+
+  color: black;
+  font-size: 20px;
+}
+
+.sec-p-rating {
+  color: yellowgreen;
+  font-size: 18px;
+
+  margin-bottom: 20px;
+}
+
+.sec-div-content a {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.sec-btn {
+  width: 180px;
+  margin: 0 auto;
+  padding-top: 55px;
+  padding-bottom: 150px;
+}
+
+.sec-btn>button {
+  width: 180px;
+  height: 50px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: black;
+  color: #f8e8ff;
+  font-style: italic;
+  font-size: 20px;
+  font-family: deardefault;
+
+  cursor: pointer;
+}
+
+.sec-btn>button:hover {
+  background-color: rgb(105, 105, 105);
+  color: #ffffff;
+}
+
+@media (max-width: 1023px) {
+  section {
+    width: 680px;
+  }
+
+  .sec-btn {
+    padding-bottom: 150px;
+  }
 }
 
 @media (max-width: 767px) {
   section {
     position: relative;
-    top: 1200px;
+    top: 300px;
+    width: 330px;
+    height: 2100px;
+  }
+
+  [class*='sec-div-'] {
+    display: inline-block;
+  }
+
+  .sec-btn {
+    padding-top: 30px;
+    padding-bottom: 100px;
+  }
+
+  header nav ul .head-li {
+    height: 70px;
   }
 }

@@ -1,7 +1,4 @@
-/****************/
 /* form design */
-
-
 form>label {
   font-size: 18px !important;
   font-weight: bold !important;
@@ -56,7 +53,13 @@ button:hover {
   position: relative;
   width: 100%;
   height: 400px;
-  top: 70px;
+  top: 146px;
+}
+
+@media (max-width:767px) {
+  .map_wrap {
+    top: 330px;
+  }
 }
 
 #menu_wrap {
