@@ -8,9 +8,10 @@
   <link rel="stylesheet" href="css/search_style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/script.js" type="text/javascript"></script>
+  <script src="https://use.fontawesome.com/926fe18a63.js"></script>
   <script type="text/javascript"
     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=f2c751d94490f2b527082f7358e0b347&libraries=services"></script>
-  <title>Document</title>
+  <title>가지탈출</title>
 
 </head>
 
@@ -50,6 +51,37 @@
       <div id="pagination"></div>
     </div>
   </div>
+
+  <!-- nav 메뉴 -->
+  <script>
+    $(document).ready(function () {
+      var chk = true;
+      $('.head-btn').click(function () {
+        if (chk) {
+          $('.head-ul').slideToggle();
+          $('.head-ul').css({
+            'display': 'flex'
+          });
+          $('.map_wrap').css({
+            'top': '150px'
+          });
+          chk = !chk;
+
+        } else {
+          $('.head-ul').slideToggle();
+          setTimeout(function () {
+            $('.map_wrap').css({
+              'top': '70px'
+            });
+          }, 150)
+
+          chk = !chk;
+        }
+      });
+    });
+  </script>
+
+  <!-- 카카오 맵 API -->
   <script>
     var markers = []; // 마커
 

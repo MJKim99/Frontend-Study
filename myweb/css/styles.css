@@ -118,85 +118,10 @@ header .head-li a:hover {
 }
 
 /****************/
-/* All section */
-img {
-  border-radius: 3px;
-  
-}
-section {
-  height: 780px;
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-
-  position: relative;
-  top: 300px;
-}
-
-section div {
-  display: inline-block;
-}
-    /* class 값에 "col-" 를 가진 요소*/
-    /* [class*="col-"] { */
-[class*="content"] {
-  margin: 10px 200px;
-}
-
-section>div>h1 {
-  font-size: 64px;
-}
-
-section>div p {
-  font-size: 22px;
-}
-
-section img {
-  width: 500px;
-  height: 500px;
-}
-
-@media (max-width: 767px) {
-  section .wrap- {
-    margin-bottom: 100px;
-  }
-
-  section>div {
-    margin: 50px;
-  }
-
-  section img {
-    width: 380px;
-    height: 380px;
-  }
-}
-
-@media (min-width: 768px) {
-  section {
-    top: 50px;
-  }
-
-  section div {
-    float: left;
-  }
-}
-
-/****************/
-/* section A */
-
-
-/****************/
-/* section B */
-
-
-/****************/
-/* section C */
-
-
-/****************/
 /* footer */
 footer {
   background-color: white;
-  position: relative;
+  /* position: relative; */
   height: 200px;
   padding: 0 50px;
 }
@@ -206,13 +131,7 @@ footer ul {
 }
 
 footer .footer-inquiry-mail {
-  position: absolute;
-  bottom: 120px;
-}
-
-footer .footer-sns-icon {
-  position: absolute;
-  bottom: 60px;
+  padding-top: 20px;
 }
 
 footer .footer-sns-icon li {
@@ -232,17 +151,11 @@ footer .footer-sns-icon li:last-child {
 }
 
 footer .footer-github {
-  position: absolute;
-  bottom: 20px;
+  padding-top: 20px;
 }
 
 footer .footer-eggplant-icon {
-  position: absolute;
-  bottom: 0px;
-
   font-size: 1px;
   color: black;
-}
-
-@media (max-width: 767px) {
+  padding-top: 15px;
 }

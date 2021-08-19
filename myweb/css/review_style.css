@@ -1,43 +1,27 @@
-@font-face {
-  font-family: BMJUA;
-  src: url('../fonts/BMJUA_otf.otf');
-}
-
 * {
   box-sizing: border-box;
-  font-family: BMJUA;
   color: #58595B;
-}
-
-body {
-  background-color: #F0E8D9;
 }
 
 p {
   margin: 0;  
 }
 
-.title {
-  text-align: center;
-  font-size: 64px;
-  margin-top: 75px;
+section {
+  margin-right: auto;
+  margin-left: auto;
+  
+  width: 700px;
 }
 
-.subtitle {
-  text-align: center;
-  font-size: 32px;
-  margin-top: 30px;
-  margin-bottom: 75px;
-}
-
-.divs-food {
+.sec-div {
   margin-right: auto;
   margin-left: auto;
   
   width: 660px;
 }
 
-.div-food {
+.sec-div-content {
   width: 300px;
   border-radius: 10px;
   
@@ -59,17 +43,19 @@ img {
   padding: 20px;
 }
 
-.p-food-title {
+.sec-p-title {
   font-size: 32px;
   margin-top: 0px;
   margin-bottom: 20px;
 }
 
-.p-food-ex {
+.sec-p-content {
   margin-bottom: 16px;
 }
 
-a  {
-  text-decoration: none;
-  color: #0000EE;
+@media (max-width: 767px) {
+  section {
+    position: relative;
+    top: 1200px;
+  }
 }
