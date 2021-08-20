@@ -3,14 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
 @font-face {
-  font-family: 'deardefault';
-  src: url('../src/fonts/DearDefault.ttf') format('truetype');
+  font-family: 'IM_Hyemin-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
+
+
 
 body {
   margin: 0;
   padding: 0;
-  font-family: deardefault;
+  font-family: 'IM_Hyemin-Bold';
   background-color: rgb(233, 233, 233);
   color: rgb(0, 0, 0);
 }

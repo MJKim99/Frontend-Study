@@ -1,8 +1,35 @@
- 
-// var req_url = 'http://openapi.seoul.go.kr:8088/(인증키)/json/';
+// impromptu.html
+function chkSubmit() {
+  var frm = document.forms.frm;
+  var region = frm.region.value;
+  var perCnt = frm.perCnt.value;
+  var genre = frm.genre.value;
+  var level = frm.level.value;
+  var content = frm.content.value.trim();
 
-// http: //openapi.seoul.go.kr:8088/sample/json/LOCALDATA_031302/1/5/
+  if (content == "") {
+    alert("내용을 입력해주세요.")
+    frm.content.focus();
+    return false;
+  } else {
+    $('textarea').val('');
+    writeDiv(region, perCnt, genre, level, content);
+  }
+}
 
+function writeDiv(region, perCnt, genre, level, content) {
+  var writing = `<div class="sec-writing">`;
+  writing += `<p>지역 : ${region}</p>`
+  writing += `<p>모집인원 : ${perCnt}</p><br>`
+  writing += `<p>장르 : ${genre}</p>`
+  writing += `<p>난이도 : ${level}</p>`
+  writing += `<p>${content}</p>`
+  writing += `</div><hr>`;
+  $('.sec-form').append(writing);
+}
+
+
+/***********************************************************************/
 // 카카오맵 API
 function searchPlaces() { // 검색 요청
   var keyword = document.getElementById('keyword').value;

@@ -1,21 +1,125 @@
-section {  
+section {
   width: 980px;
   margin: 0 auto;
-
-  background-color: blue;
-}
-
-.sec-form {
-
 }
 
 label {
+  display: inline-block;
+  width: 170px;
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
   font-size: 32px;
 }
 
-@media (max-width: 768px) {
+select {
+  padding: 5px;
+  width: 120px;
+}
+
+[class*='frm-div'] {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.sec-btn>button {
+  width: 180px;
+  height: 50px;
+  
+  border: none;
+  border-radius: 5px;
+
+  background-color: black;
+  color: #f8e8ff;
+  font-style: italic;
+  font-family: 'IM_Hyemin-Bold';
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.sec-btn {
+  width: 180px;
+  margin: 20px auto;
+  margin-bottom: 40px;
+}
+
+.sec-writing {
+  margin-left: 100px;
+}
+
+.sec-writing p {
+  display: inline-block;
+  margin-left: 30px;
+
+  font-size: 22px;
+}
+
+.sec-writing p:last-child {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  header nav ul .head-li {
+    height: 70px;
+  }
+
   section {
-    width: 530px;
-    margin-top: 30px;
+    position: relative;
+    top: 300px;
+  }
+  [class*='frm-div'] {
+    display: block;
+    border-bottom: 1px solid black;
+  }
+
+  textarea {
+    display: inline-block;
+    width: 300px;
+  }
+
+  .sec-btn {
+    width: 645px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 849px) {
+  .frm-div-2>label {
+    margin-left: 80px;
+  }
+
+  .frm-div-3 {
+    display: block;
+  }
+
+  .frm-div-4 {
+    display: block;
+  }
+
+  textarea {
+    display: inline-block;
+    width: 500px;
+  }
+
+  .sec-btn {
+    width: 350px;
+  }
+}
+
+@media (min-width: 850px) {
+  label {
+    width: 120px;
+  }
+
+  select {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
+
+  textarea {
+    display: inline-block;
+    width: 600px;
+    margin-left: 10px;
   }
 }

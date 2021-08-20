@@ -25,7 +25,7 @@ section {
 }
 
 [class*='sec-div-'] {
-  height: 330px;
+  height: 375px;
   display: inline-block;
   margin-bottom: 50px;
 }
@@ -34,26 +34,27 @@ section {
   margin: 20px 0 30px 0;
 
   color: black;
-  font-size: 36px;
+  font-size: 30px;
 }
 
 .sec-p-content {
   margin: 0 25px 20px 25px;
 
   color: black;
-  font-size: 20px;
+  font-size: 21px;
 }
 
 .sec-p-rating {
   color: yellowgreen;
-  font-size: 18px;
+  font-size: 20px;
 
   margin-bottom: 20px;
 }
 
 .sec-div-content a {
   display: inline-block;
-  margin-bottom: 10px;
+
+  font-size: 21px;
 }
 
 .sec-btn {
@@ -73,8 +74,8 @@ section {
   background-color: black;
   color: #f8e8ff;
   font-style: italic;
+  font-family: 'IM_Hyemin-Bold';
   font-size: 20px;
-  font-family: deardefault;
 
   cursor: pointer;
 }
